@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Allen SDK 2.0</title>
+		{% load staticfiles %}
+		<!-- import css files  -->
+		<link rel="stylesheet" type="text/css" href="{% static 'allen_sdk_app/css/materialize.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'allen_sdk_app/css/index_styles.css' %}">
+		<!-- import javascript files -->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="{% static 'allen_sdk_app/js/index_jQuery.js' %}"></script>
+	</head>
+	<body>
+		<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper">
+					<a href="{% url 'index' %}" class="brand-logo center">ALLEN BRAIN ATLAS</a>
+				</div>
+			</nav>	
+		</div>
+		<div class="row container">
+			<div class="col s6 offset-s3 center-align">
+				<h1>Meet The SDK</h1>
+			</div>
+		</div>
+		<div class="row container">
+			<div class="section">
+				<div id="beginners-card"class="col s4 hoverable center-align">
+					<a href="{% url 'beginners_index' %}"><span class="flow-text">Beginners start here</span></a>
+				</div>
+				<div id="select-sdk-card"class="col s4 hoverable center-align">
+					<a href="{% url 'select_sdk' %}"><span class="flow-text">Select an SDK</span></a>
+				</div>
+				<div id="coding-gurus-card"class="col s4 hoverable center-align">
+					<a href="#"><span class="flow-text">Coding Gurus</span></a>
+				</div>
+			</div>
+		</div>
+		<div class="row container">
+			<div class="section">
+				<div class="col s6 offset-s3 center-align">
+					<p id="overview" class="flow-text">Hover over one of the links to see a description</p>
+					<p id="beginners-overview" class="flow-text hidden">beginner's guide</p>
+					<p id="select-sdk-overview" class="flow-text hidden">select an sdk</p>
+					<p id="coding-gurus-overview" class="flow-text hidden">coding gurus</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

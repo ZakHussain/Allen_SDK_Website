@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Beginner's Guide</title>
+		<!--Import Google Icon Font-->
+      	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		{% load staticfiles %}
+		<!--Import css files-->
+		<link rel="stylesheet" type="text/css" href="{% static 'beginners_app/css/myStyles.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'beginners_app/css/materialize.css' %}">
+		<!--Import jQuery before materialize.js and myJquery.js-->	
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="{% static 'beginners_app/js/myJquery.js' %}"></script>
+		<script type="text/javascript" src="{% static 'beginners_app/js/materialize.js' %}"></script>
+
+	</head>
+	<body>
+		<!-- fixed nav bar at the top -->
+		<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper  light-blue darken-4">
+					<a href="{% url 'index' %}" class="brand-logo flow-text minimum-width center">ALLEN BRAIN ATLAS</a>
+				</div>
+			</nav>	
+		</div>
+		<!-- Sidebar Navigator-->
+		<div class="row" >
+			<div class="sidebar-menu col s2">
+				<!-- Title showing the name of the current app the use is on -->
+				<div class="center">
+					<a href="#"><h1 class="boxed-item flow-text">ALLEN <span class="logo-bold">SDK</span></h1></a>
+					<h2 class="app-title flow-text">Beginner's Guide</h2>
+				</div>
+				<div>
+					<ul class="nav-selection">
+						<li class="section nav-item">ITEM 1</li>
+						<li class="section nav-item">ITEM 2</li>
+						<li class="section  nav-item">ITEM 3</li>
+						<li class="section nav-item">ITEM 4</li>
+					</ul>
+				</div>
+				<div class="center">
+					<a href="#"><h2 class="boxed-item box-highlight flow-text">Need Help?</h2></a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+

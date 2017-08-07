@@ -1,0 +1,102 @@
+*{	
+	margin: 0; 
+	padding: 0; 
+	text-decoration: none;
+	list-style: none;
+}
+
+/*sidebar-menu creates frame of the sidebar navigator*/
+.sidebar-menu {
+	position: fixed; 
+
+}
+.sidebar-menu {
+	position: fixed; 
+	margin-left: 0px;
+	overflow: hidden;
+	height: 100vh;
+	max-height: 100vh;
+	min-width: 200px;
+	background-color: rgba(17, 17, 17, 0.9); /*red green bluw opacity*/
+	opacity: 0.9;
+	transition: all 0.3s ease-in-out; 
+}
+
+/*center centers content on the sidebar navigator*/
+.center {
+	text-align: center;
+}
+
+/*boxed-item boxes in the title of the Allen SDK*/
+.boxed-item {
+	font-weight: 200;
+	padding: 10px 20px;
+	display: inline-block;
+	border: solid 2px white;
+	box-sizing: border-box;
+	color: white;
+	text-align: center;
+	margin-top: 70px;
+	margin-bottom: 0px;
+}
+
+.minimum-width {
+	min-width: 300px;
+}
+
+.logo-bold {
+	font-weight: 800;
+}
+
+/*app-title shows titles the app right under the box containing the Allen SDK title*/
+.app-title {
+	color: white;
+	font-weight: 200;	
+	text-align: center;
+	padding: 5px 0px; 
+	margin-top: 0px;
+}
+
+.navigation_selection{
+	margin: 20px 0;
+	display: block;
+	width: 200px;
+	margin: 25px;
+}
+
+.nav-item {
+    font-weight: 200;
+    color: white;
+    padding: 12px 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #D8D8D8;
+    border-bottom: solid 1px #D8D8D8;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+	opacity: 1;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.box-highlight {
+	font-size: 12px;
+	color: #D8D8D8;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	border-width: 1px;
+	margin: 10px 0 20px 0;
+
+}
+
+.box-highlight:hover {
+	background-color: white;
+	color: #111;
+	transition: all 0.3s ease-in-out;
+}
+
+
