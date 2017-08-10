@@ -19,7 +19,7 @@
 		<div class="navbar-fixed">
 			<nav>
 				<div class="nav-wrapper  light-blue darken-4">
-					<a href="{% url 'index' %}" class="brand-logo flow-text minimum-width center">ALLEN BRAIN ATLAS</a>
+					<a href="{% url 'index' %}" class="brand-logo flow-text minimum-width left">ALLEN BRAIN ATLAS</a>
 				</div>
 			</nav>	
 		</div>
@@ -32,15 +32,73 @@
 					<h2 class="app-title flow-text">Brain Observatory</h2>
 				</div>
 				<div>
-					<ul class="nav-selection">
-						<a href="{% url 'brain_observatory_index' %}"><li class="section nav-item">Getting Started</li></a>
-						<a href="{% url 'tutorials' %}"><li class="section nav-item">Tutorials</li></a>
-						<a href="{% url 'documentation' %}"><li class="section  nav-item">Documentation</li></a>
-						<a href="{% url 'release_notes' %}"><li class="section nav-item">Realease Notes</li></a>
+										<!-- sidenac tabs as collapsables-->
+					<ul class="collapsible" data-collapsible="accordion">
+						<li class="section nav-item">
+							<div class="section collapsible-header">
+								<a href="{% url 'brain_observatory_index' %}">Welcome</a>
+								<i class="material-icons"></i>
+							</div>
+							<ul class="collapsible-body">
+								<li class="section nav-item">About</li>
+								<li class="section nav-item">This is second section.</li>
+							</ul>
+						</li>
+						<li class="section nav-item">
+							<div class="section collapsible-header">
+								<a href="{% url 'tutorials' %}">Tutorials</a>
+								<i class="material-icons"></i>
+							</div>
+							<ul class="collapsible-body">
+								<li class="section nav-item">Intro to Experiment Containers</li>
+								<li class="section nav-item">This is second section.</li>
+							</ul>
+						</li>
+						<li class="section nav-item">
+							<div class="section collapsible-header">
+								<a href="{% url 'documentation' %}">Documentation</a>
+								<i class="material-icons"></i>
+							</div>
+						</li>
+						<li class="section nav-item">
+							<div class="section collapsible-header">
+								<a href="{% url 'release_notes' %}">Release Notes</a>
+								<i class="material-icons"></i>
+							</div>
+							<ul class="collapsible-body">
+								<li class="section nav-item">Revision 0.13.2</li>
+								<li class="section nav-item">This is second section.</li>
+							</ul>
+						</li>		
 					</ul>
 				</div>
 				<div class="center">
 					<a href="#"><h2 class="boxed-item box-highlight flow-text">Need Help?</h2></a>
+				</div>
+			</div>
+		</div>
+		<!-- this will contain the main con -->
+		<div class="row">
+			<div class="col s10 offset-s2">
+				<div class="container blue div-border">
+					<h1 class="white-text center">Our Documentation</h1>
+				</div>
+			</div>
+		</div>
+		<!-- content -->
+		<div class="row">
+			<div class="col s10 offset-s2">
+				<div class="container div-border">
+					<h1 class="center-align">Image Here</h1>
+					<p class="flow-text center">Click the button below to be directed to our documentation in readthedocs</p>
+					<div class="center-align">
+						<a href="http://localhost:1234/" target="_blank">
+							<button class="btn waves-effect waves-light green type="submit" name="action">
+								to readthedocs
+								<i class="material-icons right">book</i>
+							</button>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>

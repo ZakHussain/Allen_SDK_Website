@@ -20,7 +20,7 @@
 		<div class="navbar-fixed">
 			<nav>
 				<div class="nav-wrapper  light-blue darken-4">
-					<a href="{% url 'index' %}" class="brand-logo flow-text minimum-width center">ALLEN BRAIN ATLAS</a>
+					<a href="{% url 'index' %}" class="brand-logo flow-text minimum-width left">ALLEN BRAIN ATLAS</a>
 				</div>
 			</nav>	
 		</div>
@@ -33,13 +33,77 @@
 					<h2 class="app-title flow-text">Beginner's Guide</h2>
 				</div>
 				<div>
-					<ul class="nav-selection">
-						<a href="{% url 'beginners_index' %}"><li class="section nav-item">Getting Started</li></a>
-						<a href="{% url 'installation' %}"><li class="section nav-item">Installation</li></a>
+					<!-- collapsable sidnav content -->
+					<ul class="collapsible" data-collapsible="accordion">
+						<li class="section nav-item">
+							<div class="section collapsible-header"><a href="{% url 'beginners_index' %}">Welcome</a>
+							<i class="material-icons"></i></div>
+							<ul class="collapsible-body">
+								<li id="intro-to-aibs-selector" class="section nav-item">Intro to the Allen Institute Brain Atlas SDK</li>
+								<li id="data-science-selector" class="section nav-item">Data Driven Science</li>
+								<li id="open-source-selector" class="section nav-item">Open Source and Large Scale Group Participation</li>	
+								<li id="challenge-solutions-selector"class="section nav-item">Challenges and Solutions</li>						
+							</ul>
+						</li>
+						<li class="section nav-item">
+							<div class="section collapsible-header"><a href="{% url 'installation' %}">Installing</a>
+							<i class="material-icons"></i></div>
+							<ul class="collapsible-body">
+								<li class="section nav-item">Conda install</li>
+								<li class="section nav-item">PIP installs</li>
+								<li class="section nav-item">Dependencies</li>
+								<li class="section nav-item">Operating Systems</li>
+							</ul>
+						</li>		
 					</ul>
 				</div>
 				<div class="center">
 					<a href="#"><h2 class="boxed-item box-highlight flow-text">Need Help?</h2></a>
+				</div>
+			</div>
+		</div>
+		<!-- this will contain the main content -->
+		<div class="row">
+			<div class="col s10 offset-s2">
+				<div class="container blue  div-border">
+					<h1 class="white-text center-align">Welcome to the Beginner's Guide</h1>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s10 offset-s2">
+				<div class="container div-border">
+
+					<h1 id="first-header" class="center-align">Select A Section</h1>
+					<h1 id="intro-to-aibs-header" class="center-align hidden">Intro to the Allen Institute Brain Atlas SDK</h1>
+					<h1 id="data-science-header" class="center-align hidden">Data Driven Science</h1>
+					<h1 id="open-source-header" class="center-align hidden">Open Source and Large Scale Group Participation</h1>
+					<h1 id="challenge-solutions-header" class="center-align hidden">Challenges and Solutions</h1>
+
+					<p id="intro-to-aibs" class="flow-text center hidden">
+					The Allen Brain Atlas is an open source knowledge center containing a wealth of experimental neuroscience data that is patiently waiting to be explored by computational and scientific thinkers. Here we hope to present a high level introduction to those interested in learning as much about the scientific investigations and data generated at the Allen Institute, as quickly as possible. We will present a framework in which the uninitiated but curious citizen scientist can learn about the state of the art knowledge and frontiers of computational neuroscience. The end goal is to generate a large scale team effort in which multiple groups of computationally minded problem solvers can work together to discover the mysteries of the brain.
+					</p>	
+
+					<p id="data-science" class="flow-text center hidden">
+					The Allen institute's adoption of large scale open science has been very successful at generating excitement and participation among specialists and experts in the academic neuroscience community. So far, the results have been positive with some incredibly innovative and game changing science taking place at, and in collaboration, with the institute. The next logical step, however, is to engage the upcoming generation of scientists and computational thinkers to actively participate in the exploration of the troves of data contained in the Brain Atlas.
+
+					The amount of insight that is hidden in the data is potentially enormous and this should be no suprise and a non-controversial opinion among those who are intimately familiar with the history of the scientific method. Some of the most fundamental scientific results (if not most) were discovered by a data driven approach guided by the insight of a curious mind.
+
+					A perfect example comes from Kepler's discovery of the three laws governing planetary motion. Kepler notoriously stole the meticulous data, collected by his boss, Tycho Brahe, which contained painstaking measurements of the locations of planets in the sky. From a thorough study of the data and some extremely clever insight, Kepler was able to lay the foundations for the discovery of Newton's laws of motion, arguably one of the highest achievements of science.
+					</p>
+
+					<p id="open-source" class="flow-text center hidden">
+					The Allen Institute is pioneering a new approach to producing, storing, and sharing their massive collection of experimental data (that continues to grow). Since the Institute's ongoing data pipelines are available to the public, there is a huge opportunity to begin a large scale group effort to mine the data as it continues to be released. This large scale task will be considerably more effective if the load of work is distributed among a diverse group of computational problem solvers which hail from a variety of educational backgrounds. The two necessary prerequisites to participate are straightforward:
+
+					Computational skills including statistics, machine learning, mathematical modeling, etc.
+
+					Enthusiasm about exploring neuroscientific data and a strong desire to contribute to one of the most exciting intellectual scientific endeavors of our generation: understanding the brain.
+					</p>
+					
+					<p id="challenge-solutions" class="flow-text center hidden">
+					Under this model, the ideas and direction would be guided by experts within the field who know the interesting questions to ask, but the overall analysis would be distributed among general computational problem solvers. This could include university students, scientists who have left academia and transitioned into industy, and potentially any individual willing to put in the time and effort to get to a minimal base level of knowledge.
+					</p>		
+
 				</div>
 			</div>
 		</div>

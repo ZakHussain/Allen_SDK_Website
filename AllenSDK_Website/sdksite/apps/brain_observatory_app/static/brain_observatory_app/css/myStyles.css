@@ -29,7 +29,7 @@
 
 /*boxed-item boxes in the title of the Allen SDK*/
 .boxed-item {
-	font-weight: 200;
+	font-weight: 400;
 	padding: 10px 20px;
 	display: inline-block;
 	border: solid 2px white;
@@ -71,7 +71,7 @@
     box-sizing: border-box;
     font-size: 14px;
     color: #D8D8D8;
-    border-bottom: solid 1px #D8D8D8;
+    /*border-bottom: solid 1px #D8D8D8;*/
     transition: all 0.3s ease-in-out;
     opacity: 0.7;
     cursor: pointer;
@@ -98,5 +98,15 @@
 	color: #111;
 	transition: all 0.3s ease-in-out;
 }
+
+.hidden{
+	display: none; 
+}
+
+.div-border {
+	border: solid;
+	color: black;
+}
+
 
 

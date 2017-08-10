@@ -19,7 +19,7 @@
 		<div class="navbar-fixed">
 			<nav>
 				<div class="nav-wrapper  light-blue darken-4">
-					<a href="{% url 'index' %}" class="brand-logo flow-text minimum-width center">ALLEN BRAIN ATLAS</a>
+					<a href="{% url 'index' %}" class="brand-logo flow-text minimum-width left">ALLEN BRAIN ATLAS</a>
 				</div>
 			</nav>	
 		</div>
@@ -32,13 +32,45 @@
 					<h2 class="app-title flow-text">Beginner's Guide</h2>
 				</div>
 				<div>
-					<ul class="nav-selection">
-						<a href="{% url 'beginners_index' %}"><li class="section nav-item">Getting Started</li></a>
-						<a href="{% url 'installation' %}"><li class="section nav-item">Installation</li></a>
+					<!-- collapsable sidnav content -->
+					<ul class="collapsible" data-collapsible="accordion">
+						<li class="section nav-item">
+							<div class="section collapsible-header"><a href="{% url 'beginners_index' %}">Welcome</a>
+							<i class="material-icons"></i></div>
+							<ul class="collapsible-body">
+								<li class="section nav-item">About</li>
+								<li class="section nav-item">Getting Started</li>
+							</ul>
+						</li>
+						<li class="section nav-item">
+							<div class="section collapsible-header"><a href="{% url 'installation' %}">Installing</a>
+							<i class="material-icons"></i></div>
+							<ul class="collapsible-body">
+								<li class="section nav-item">Conda install</li>
+								<li class="section nav-item">PIP installs</li>
+								<li class="section nav-item">Dependencies</li>
+								<li class="section nav-item">Operating Systems</li>
+							</ul>
+						</li>		
 					</ul>
 				</div>
 				<div class="center">
 					<a href="#"><h2 class="boxed-item box-highlight flow-text">Need Help?</h2></a>
+				</div>
+			</div>
+		</div>
+		<!-- this will contain the main content -->
+		<div class="row">
+			<div class="col s10 offset-s2">
+				<div class="container blue div-border">
+					<h1 class="white-text center-align">Installing</h1>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s10 offset-s2">
+				<div class="container div-border">
+					<h1 class="center-align">Content</h1>
 				</div>
 			</div>
 		</div>

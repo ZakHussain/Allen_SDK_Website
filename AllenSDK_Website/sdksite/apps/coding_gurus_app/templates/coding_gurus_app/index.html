@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Release Notes | Brain Observatory</title>
+		<title>Welcome | Coding Gurus</title>
 		<!--Import Google Icon Font-->
       	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		{% load staticfiles %}
 		<!--Import css files-->
-		<link rel="stylesheet" type="text/css" href="{% static 'brain_observatory_app/css/myStyles.css' %}">
-		<link rel="stylesheet" type="text/css" href="{% static 'brain_observatory_app/css/materialize.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'coding_gurus_app/css/myStyles.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'coding_gurus_app/css/materialize.css' %}">
 		<!--Import jQuery before materialize.js and myJquery.js-->	
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="{% static 'brain_observatory_app/js/myJquery.js' %}"></script>
-		<script type="text/javascript" src="{% static 'brain_observatory_app/js/materialize.js' %}"></script>
+		<script type="text/javascript" src="{% static 'coding_gurus_app/js/myJquery.js' %}"></script>
+		<script type="text/javascript" src="{% static 'coding_gurus_app/js/materialize.js' %}"></script>
 
 	</head>
 	<body>
@@ -29,14 +29,14 @@
 				<!-- Title showing the name of the current app the use is on -->
 				<div class="center">
 					<a href="#"><h1 class="boxed-item flow-text">ALLEN <span class="logo-bold">SDK</span></h1></a>
-					<h2 class="app-title flow-text">Brain Observatory</h2>
+					<h2 class="app-title flow-text">Coding Gurus</h2>
 				</div>
 				<div>
-					<!-- sidenac tabs as collapsables-->
+				<!-- sidenac tabs as collapsables-->
 					<ul class="collapsible" data-collapsible="accordion">
 						<li class="section nav-item">
 							<div class="section collapsible-header">
-								<a href="{% url 'brain_observatory_index' %}">Welcome</a>
+								<a href="{% url 'coding_gurus_index' %}">Welcome</a>
 								<i class="material-icons"></i>
 							</div>
 							<ul class="collapsible-body">
@@ -46,27 +46,41 @@
 						</li>
 						<li class="section nav-item">
 							<div class="section collapsible-header">
-								<a href="{% url 'tutorials' %}">Tutorials</a>
+								<a href="#">Technology</a>
 								<i class="material-icons"></i>
 							</div>
 							<ul class="collapsible-body">
-								<li class="section nav-item">Intro to Experiment Containers</li>
+								<li class="section nav-item">Clustering Cell Responses to a Particular Stimulus</li>
 								<li class="section nav-item">This is second section.</li>
 							</ul>
 						</li>
 						<li class="section nav-item">
 							<div class="section collapsible-header">
-								<a href="{% url 'documentation' %}">Documentation</a>
-								<i class="material-icons"></i>
-							</div>
-						</li>
-						<li class="section nav-item">
-							<div class="section collapsible-header">
-								<a href="{% url 'release_notes' %}">Release Notes</a>
+								<a href="#">Cell Types</a>
 								<i class="material-icons"></i>
 							</div>
 							<ul class="collapsible-body">
-								<li class="section nav-item">Revision 0.13.2</li>
+								<li class="section nav-item">This is first section.</li>
+								<li class="section nav-item">This is second section.</li>
+							</ul>
+						</li>
+						<li class="section nav-item">
+							<div class="section collapsible-header">
+								<a href="#">Modeling and Analysis</a>
+								<i class="material-icons"></i>
+							</div>
+							<ul class="collapsible-body">
+								<li class="section nav-item">This is first section</li>
+								<li class="section nav-item">This is second section.</li>
+							</ul>
+						</li>
+						<li class="section nav-item">
+							<div class="section collapsible-header">
+								<a href="#">Neural Coding</a>
+								<i class="material-icons"></i>
+							</div>
+							<ul class="collapsible-body">
+								<li class="section nav-item"><a href="{% url 'Jeffery' %}">Machine Learning with Jeffery</li></a>
 								<li class="section nav-item">This is second section.</li>
 							</ul>
 						</li>		
@@ -81,7 +95,7 @@
 		<div class="row">
 			<div class="col s10 offset-s2">
 				<div class="container blue div-border">
-					<h1 class="white-text center">Release Notes</h1>
+					<h1 class="white-text center">Welcome to Coding Gurus</h1>
 				</div>
 			</div>
 		</div>
@@ -89,8 +103,7 @@
 		<div class="row">
 			<div class="col s10 offset-s2">
 				<div class="container div-border">
-					<h1 class="center-align">Revision 0.13.2</h1>
-					<p class="flow-text center">The 0.13.2 release is a major update for the Brain Observatory modules and data. All Brain Observatory NWB files have been regenerated, and a large number of new experiments have been released. All NWB files now contain demixed traces. These traces are used for neuropil subtraction and dF/F computation, so those traces are affected as well.</p>
+					<h1 class="center-align">Content</h1>
 				</div>
 			</div>
 		</div>
