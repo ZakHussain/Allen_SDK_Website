@@ -40,8 +40,37 @@
 								<i class="material-icons"></i>
 							</div>
 							<ul class="collapsible-body">
-								<li class="section nav-item">About</li>
-								<li class="section nav-item">This is second section.</li>
+								<li class="section nav-item">Basic Workflow</li>
+								<li class="section nav-item">About the Brain Observatory</li>
+								<li class="section nav-item">Overview of Experiment</li>
+								<li class="section nav-item">Overview of Visual Stimuli</li>
+								<li class="section nav-item">Overview of the Data</li>
+							</ul>
+						</li>
+						<!-- the goal of the Analysis section is to show the user basics of what they can create with the data -->
+						<li class="section nav-item">
+							<div class="section collapsible-header">
+								<a href="{% url 'analysis' %}">Analysis</a>
+								<i class="material-icons"></i>
+							</div>
+							<ul class="collapsible-body">
+								<li class="section nav-item">Analysis Overview</li>
+								<li class="section nav-item">Fluorescence Traces</li>
+								<li class="section nav-item">ROI Masks</li>
+								<li class="section nav-item">Neuropil Correction</li>
+								<li class="section nav-item">Mouse Movement Analysis</li>
+								<li class="section nav-item">Motion Correction</li>
+								<li class="section nav-item">Eye Tracking</li>
+							</ul>
+						</li>
+						<li class="section nav-item">
+							<div class="section collapsible-header">
+								<a href="{% url 'walkthroughs' %}">Walkthroughs</a>
+								<i class="material-icons"></i>
+							</div>
+							<ul class="collapsible-body">
+								<li class="section nav-item">Walkthrough Overview</li>
+								<li class="section nav-item">Run Cluster Analysis Based on Cell Responses</li>
 							</ul>
 						</li>
 						<li class="section nav-item">
@@ -50,8 +79,15 @@
 								<i class="material-icons"></i>
 							</div>
 							<ul class="collapsible-body">
+								<li class="section nav-item">Tutorials Overview</li>
 								<li class="section nav-item">Intro to Experiment Containers</li>
-								<li class="section nav-item">This is second section.</li>
+								<li class="section nav-item">Finding Cells of Interest</li>
+								<li class="section nav-item">Get Data for Fluorescence Traces</li>
+								<li class="section nav-item">Get Data for ROI Masks</li>
+								<li class="section nav-item">Get Data for Neuropil Correction</li>
+								<li class="section nav-item">Get Data for Running Analysis</li>
+								<li class="section nav-item">Get Data for Motion Correction</li>
+								<li class="section nav-item">Get Data for Eye Tracking</li>
 							</ul>
 						</li>
 						<li class="section nav-item">
@@ -59,6 +95,10 @@
 								<a href="{% url 'documentation' %}">Documentation</a>
 								<i class="material-icons"></i>
 							</div>
+							<ul class="collapsible-body">	
+								<li class="section nav-item">Documentation Overview</li>	
+								<li class="section nav-item">Access Documentation</li>
+							</ul>
 						</li>
 						<li class="section nav-item">
 							<div class="section collapsible-header">
@@ -85,14 +125,83 @@
 				</div>
 			</div>
 		</div>
+		<!-- CONTENT -->
 		<div class="row">
 			<div class="col s10 offset-s2">
-				<div class="container div-border">
-					<h1 class="center-align">About</h1>
-					<p class="flow-text center">The Brain Observatory is home to an ongoing data pipeline, dedicated to the study of the mouse visual cortex via 2-photon excitation microscopy. The 2-photon imaging setup makes use of optogenetic techniques that allow for the study of the dynamics of individual neurons. Essentially, what happens is that individual neurons are genetically modified so that they emit fluorescence when light from a laser is shined on the region that they occupy. This gives experimentalists the ability to probe and study the dynamics of indidivual neurons under controlled conditions.</p>
+				<div class="container section">
+					<h3 class="center-align">Basic Workflow</h3>
+					<div class="left-align flow-text">
+						<p>Being able to help you utilize our data to fuel scientific growth is a key Institute goal. It is important to us to help you effectively and efficiently access our data and understand how we conducted our research. That gives you time to focus on what is truly important-- GENERATING MEANINGFUL ANALYSIS</p>
+						<p>To get you started with the brain observatory, here is an idea of what your basic workflow should look.</p>
+						<p>insert diagram here</p>
+					</div>
 				</div>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col s10 offset-s2  red lighten-5">
+				<div class="container section">
+					<h3 class="center-align">About the Brain Observatory</h3>
+					<div class="left-align flow-text">
+						<p>The Brain Observatory is home to data that comes from visual regions of mouse cortex.
+						There are two way of accessing the data. You can either search by <i>Experiment</i> or by <i>Cell</i>.</p>
+						<p>So how do you decide which method of search to use?</p>
+						<p>Use the <i>Experiment</i> search if you would like to find neuronal-population responses to stimuli.</p>
+						<p>Use the <i>Cell</i> search if you would like to find single-neuron responses to stimuli.</p>
+						<p>An in depth explanation of how to do each of these searches is found under the <i>Tutorials</i> section. For
+						now, let's get you oriented with our experimentation techniques so you understand what our data means</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s10 offset-s2">
+				<div class="container section">
+					<h3 class="center-align">Overview of the Experiments</h3>
+					<div class="left-align flow-text">
+						<p>The data we gathered comes from numerous experiments. Each experiment follows similar experimental 
+						design-- a transgenic mouse is stimulated with three synthetic stimuli and two natural stimuli. The 
+						key difference between the collection of experiments is that the following variables are changes:</p>
+						<ul>
+							<li>the transgenic mouse line</li>
+							<li>the area of the visual cortex</li>
+							<li>depth at which the cells are images</li>
+						</ul> 
+						<p>Why manipulate these variables?</p> 
+						<ul>
+							<li>Having transgenic mice allow us to observe fluorescence in cells of different cortical layers.</li>
+							<li>There are six areas of the visual cortex, so we want to see the unique response of neurons in each region</li>
+							<li>observing the activtiy of cells at different depths creates a more distinct picture of how visual info is processed</li>
+						</ul>
+						<p>Here is a rundown of the experimental procedure (look at white papers)</p>
+						<p>pretty pictures go here</p>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="row">
+			<div class="col s10 offset-s2 purple lighten-5">
+				<div class="container section">
+					<h3 class="center-align">Overview of the Visual Stimuli</h3>
+					<div class="left-align flow-text">
+						<p>let's now get you up to speed on what the visual stimuli are that we used.</p>
+						<p>Static and Drifting Gratings</p>
+						<p>Locally Sparse Noise</p>
+						<p>Natural Scences and Movies</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s10 offset-s2">
+				<div class="container section">
+					<h3 class="center-align">Overview of the Data</h3>
+					<div class="left-align flow-text">
+						<p>The Analysis section will explain more about what you may be interested on using our data for</p>
+					</div>
+				</div>
+			</div>
+		</div>	
 	</body>
 </html>
 
