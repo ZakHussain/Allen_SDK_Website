@@ -17,15 +17,24 @@
 			</nav>	
 		</div>	
 		<div class="row container">
-			<div class="col s6 offset-s3 center-align">
-				<h1>Explore The Data Resources</h1>
-			</div>
+			<video id="bgvid" playsinline autoplay muted loop>
+				<source src="https://www.alleninstitute.org/media/filer_public/96/a8/96a8dbb1-bc95-4d6f-81f7-1858bc9fb2ec/hero_3-17-17.mp4" type="video/mp4">
+			</video>		
 		</div>
-		<div class="row container">
+		<div id="card-holder" class="row container">
+			<div class="col s6 offset-s3 center-align">
+				<h1>Explore the Data Resources</h1>
+			</div>
 			<div class="section">
+<!-- #################################### -->
+
 				<div id="brain-observatory-card" class="col s4 hoverable center-align">
-					<a href="{% url 'brain_observatory_index' %}"><span class="flow-text">Brain Observatory</span></a>
+					<div class="card-image">
+						<a href="{% url 'brain_observatory_index' %}"><span class="flow-text">Brain Observatory</span></a>
+					</div>
 				</div>
+
+<!-- #################################### -->
 				<div id="cell-types-card" class="col s4 hoverable center-align">
 					<a href="#"><span class="flow-text">Cell Types Database</span></a>
 				</div>
@@ -34,10 +43,11 @@
 				</div>
 			</div>
 		</div>
+
 		<div class="row container">
 			<div class="section">
-				<div class="col s6 offset-s3 center-align">
-					<p id="overview" class="flow-text">hover over an data resource to see a description</p>
+				<div class="col s6 offset-s3 center-align card">
+					
 					<p id="brain-observatory-overview" class="flow-text hidden">
 						The Brain Observatory SDK contains data collected from mouse visual cortex. 
 						This data features visually evoked neuronal activity from:
@@ -59,5 +69,6 @@
 				</div>
 			</div>
 		</div>
+
 	</body>
 </html>

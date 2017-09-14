@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Visual Stimuli | Brain Observatory </title>
+		<!--Import Google Icon Font-->
+      	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		{% load staticfiles %}
+		<!--Import css files-->
+		<link rel="stylesheet" type="text/css" href="{% static 'brain_observatory_app/css/myStyles.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'brain_observatory_app/css/materialize.css' %}">
+		<!--Import jQuery before materialize.js and myJquery.js-->	
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="{% static 'brain_observatory_app/js/myJquery.js' %}"></script>
+		<script type="text/javascript" src="{% static 'brain_observatory_app/js/materialize.js' %}"></script>
+	</head>
+	<body>
+		<!-- fixed nav bar at the top -->
+		<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper  light-blue darken-4">
+					<a href="{% url 'index' %}" class="brand-logo flow-text minimum-width">ALLEN BRAIN ATLAS</a>
+				</div>
+			</nav>	
+		</div>
+		<!-- Sidebar Navigator-->
+		<div class="row" >
+			<div class="sidebar-menu col s2">
+		<!-- Title showing the name of the current app the use is on -->
+				<div class="center">
+					<a href="#"><h1 class="boxed-item flow-text">ALLEN <span class="logo-bold">SDK</span></h1></a>
+					<h2 class="app-title flow-text">Brain Observatory</h2>
+				</div>
+				<div>
+		<!-- sidenac tabs as collapsables-->
+					<ul class="collapsible" data-collapsible="accordion">
+						<li class="section nav-item">
+							<div class="section collapsible-header">
+								<a href="{% url 'brain_observatory_index' %}">Welcome</a>
+								<i class="material-icons"></i>
+							</div>
+							<ul class="collapsible-body">
+								<li class="section nav-item">Basic Workflow</li>
+								<li class="section nav-item">About the Brain Observatory</li>
+								<li class="section nav-item">Overview of Experiment</li>
+								<li class="section nav-item">Overview of Visual Stimuli</li>
+								<li class="section nav-item">Overview of the Data</li>
+							</ul>
+						</li>
+		<!-- the goal of the Visual Coding section show the use how we used different stimuli to look at visual coding in the brain -->
+						<li class="section nav-item">
+							<div class="section collapsible-header">
+								<a href="{% url 'visual_coding' %}">Visual Coding</a>
+								<i class="material-icons"></i>
+							</div>
+							<ul class="collapsible-body">
+								<li class="section nav-item">Overview</li>
+								<li class="section nav-item">Understanding the Stimuli</li>
+								<li class="section nav-item">Drifting Gratings</li>
+								<li class="section nav-item">Static Gratings</li>
+								<li class="section nav-item">Natural Scenes</li>
+								<li class="section nav-item">Natural Movies</li>
+								<li class="section nav-item">Locally Sparse Noise</li>
+								<li class="section nav-item">Eye Tracking</li>
+							</ul>
+						</li>
+		<!-- the goal of the Analysis section is to show the user basics of what they can create with the data -->
+						<li class="section nav-item">
+							<div class="section collapsible-header">
+								<a href="{% url 'analysis' %}">Analysis</a>
+								<i class="material-icons"></i>
+							</div>
+							<ul class="collapsible-body">
+								<li class="section nav-item">Analysis Overview</li>
+								<li class="section nav-item">Fluorescence Traces</li>
+								<li class="section nav-item">ROI Masks</li>
+								<li class="section nav-item">Neuropil Correction</li>
+								<li class="section nav-item">Mouse Movement Analysis</li>
+								<li class="section nav-item">Motion Correction</li>
+								<li class="section nav-item">Eye Tracking</li>
+							</ul>
+						</li>
+						<li class="section nav-item">
+							<div class="section collapsible-header">
+								<a href="{% url 'walkthroughs' %}">Walkthroughs</a>
+								<i class="material-icons"></i>
+							</div>
+							<ul class="collapsible-body">
+								<li class="section nav-item">Walkthrough Overview</li>
+								<li class="section nav-item">Run Cluster Analysis Based on Cell Responses</li>
+							</ul>
+						</li>
+						<li class="section nav-item">
+							<div class="section collapsible-header">
+								<a href="{% url 'tutorials' %}">Tutorials</a>
+								<i class="material-icons"></i>
+							</div>
+							<ul class="collapsible-body">
+								<li class="section nav-item">Tutorials Overview</li>
+								<li class="section nav-item">Intro to Experiment Containers</li>
+								<li class="section nav-item">Finding Cells of Interest</li>
+								<li class="section nav-item">Get Data for Fluorescence Traces</li>
+								<li class="section nav-item">Get Data for ROI Masks</li>
+								<li class="section nav-item">Get Data for Neuropil Correction</li>
+								<li class="section nav-item">Get Data for Running Analysis</li>
+								<li class="section nav-item">Get Data for Motion Correction</li>
+								<li class="section nav-item">Get Data for Eye Tracking</li>
+							</ul>
+						</li>
+						<li class="section nav-item">
+							<div class="section collapsible-header">
+								<a href="{% url 'documentation' %}">Documentation</a>
+								<i class="material-icons"></i>
+							</div>
+							<ul class="collapsible-body">	
+								<li class="section nav-item">Documentation Overview</li>	
+								<li class="section nav-item">Access Documentation</li>
+							</ul>
+						</li>
+						<li class="section nav-item">
+							<div class="section collapsible-header">
+								<a href="{% url 'release_notes' %}">Release Notes</a>
+								<i class="material-icons"></i>
+							</div>
+							<ul class="collapsible-body">
+								<li class="section nav-item">Revision 0.13.2</li>
+								<li class="section nav-item">This is second section.</li>
+							</ul>
+						</li>		
+					</ul>
+				</div>
+				<div class="center">
+					<a href="#"><h2 class="boxed-item box-highlight flow-text">Need Help?</h2></a>
+				</div>
+			</div>			
+		</div>
+		<!-- this will contain the main content -->
+		<div class="row">
+			<div class="col s10 offset-s2">
+				<div class="container blue div-border">
+					<h1 class="white-text center-align">Visual Coding</h1>
+				</div>
+			</div>
+		</div>
+		<!-- CONTENT -->
+		<div class="row">
+			<div class="col s10 offset-s2">
+				<div class="container section">
+					<h3 class="center-align">Overview</h3>
+					<br>
+					<div class="left-align flow-text">
+						We need to get you up to speed on visual coding
+						and understanding the stimuli we used during our experiments. Simply put, visual coding is a 
+						process by which neurons respond and adapt to changing visual stimuli. we used a set of both natural and 
+						artificial visual stimuli to evoke cellular responses. The cellular activity was observed 
+						through in vivo calcium imaging from GCaMP6-expressing neurons in selected brain areas, 
+						cortical areas, and Cre lines. Now, let's understand the different stimuli!
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s10 offset-s2  green lighten-5">
+				<div class="container section">
+					<h3 class="center-align">Understanding the Stimuli</h3>
+					<div class="left-align flow-text">
+						As mentioned earlier, we used natural stimuli--Natural Scences and Natural Movies, as well as 
+						artificial stimuli-- Drifting Gratings, Static Gratings, and Locally Sparse Noise. We will explain
+						these further below in small chunks. For each chunk, we will explain why a particular 
+						stimuli was used, visually show you the stimuli, and display a simple data visualization to show you
+						the resulting neuronal activity we measured.	
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s10 offset-s2">
+				<div class="container section">
+					<h3 class="center-align">Drifting Gratings</h3>
+					<div class="left-align flow-text">
+						<div class="section">
+							<h5 class="left-align">Importance</h5>
+							The cellular responses acquired during the presentation of the drifting grating stimulus provide
+							data to help characterize visual tuning properties of cells, such as orientation tuning (a preference
+							for a grating orientation), direction preference, and temporal frequency tuning (a preference for a
+							specific temporal frequency).
+							<br>
+							<br>
+							<div class="center-align">
+								<iframe width="420" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+							</div>
+							<br>
+							<h5 class="left-align">Visual of Stimulus</h5>
+							The drifting grating stimulus consists of a full-field sinusoidal grating that drifts in a 
+							direction perpendicular to the orientation of the grating. In this experiment, the grating drifts in 
+							one of eight directions, at 45° intervals, and at one of five temporal frequencies, ranging from 1 to 
+							15 cycles per second, resulting in 40 distinct grating conditions. The presentation of the visual 
+							stimulus is as follows; a grating condition is presented for 2 seconds, and is followed by 1 second 
+							of mean luminance gray before the next grating condition is presented. Each of the 40 grating conditions 
+							is repeated 15 times, in a random order, and there are intermittent blank sweeps throughout the stimulus 
+							(i.e. the 2 second grating condition is replaced with 2 seconds of mean luminance gray).
+							<br>
+							<br>
+							<div class="center-align">
+								<img src="{% static "brain_observatory_app/images/drifting_gratings/drifting_gratings.JPG" %}"/>
+							</div>
+							<br>
+							<br>
+							<h5 class="left-align">Evaluating cellular responses to the Dtrifting Grating visual Stimulus</h5>
+							By comparing the responses to each of the 40 grating conditions, as measured by an increase in
+							fluorescence due to increased calcium concentration, visual tuning properties such as orientation
+							tuning, direction preference, and temporal frequency tuning are evaluated. Typically, the orientation 
+							tuning would be represented by plotting the mean response (from 15 trials) to all eight directions at 
+							the preferred temporal frequency, while the temporal frequency tuning would be represented by plotting 
+							the mean response to all five temporal frequency conditions at the preferred grating direction.
+							<br>
+							<br>
+							<div class="center-align">
+								<img src="{% static "brain_observatory_app/images/drifting_gratings/cell_responses_to_drifting_gratings.JPG" %}"/>
+							</div>
+							<br>
+							<br>
+							<h5 class="left-align">Data Visualization</h5>
+							To simplify data visualization, the cellular response to the drifting grating stimulus is represented 
+							using the "Star" plot. Each arm of this figure represents a grating drift direction, while each ring represents 
+							the temporal frequency of the grating. At each intersection, the responses from 15 trials are ranked, and 
+							represented as a single red dot, the intensity of which corresponds to the strength of the response.
+							<br>
+							<br>
+							<div class="center-align">
+								<img src="{% static "brain_observatory_app/images/drifting_gratings/evaluating_cell_responses.JPG" %}"/>
+							</div>	
+							<br>
+							<br>							
+							With this visualization, the orientation or direction tuning of a cell within a visual field can be quickly 
+							evaluated. Likewise, the temporal frequency tuning can be evaluated by comparing the responses along one axis. 
+							Further, by comparing the fifteen trials across a given visual stimulus, trial-to-trial variability can be assessed.
+							<br>
+							<br>
+							<div class="center-align">
+								<img src="{% static "brain_observatory_app/images/drifting_gratings/star_plot.JPG" %}"/>
+							</div>
+							<br>
+							<br>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="row">
+			<div class="col s10 offset-s2 purple lighten-5">
+				<div class="container section">
+					<h3 class="center-align">Static Gratings</h3>
+					<div class="left-align flow-text">
+						<div class="section">
+							<h5 class="left-align">Importance</h5>
+							The cellular responses acquired during the presentation of the static grating stimulus provide data to help characterize visual tuning properties of cells, such as the spatial frequency tuning and the orientation tuning of the cells, providing a finer measurement of orientation than provided from the drifting grating stimulus.
+							<br>
+							<br>
+							<div class="center-align">
+								<iframe width="420" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+							</div>
+							<br>
+							<h5 class="left-align">Visual of Stimulus</h5>
+							The static grating stimulus consists of a full field sinusoidal grating, that varies in orientation (the angle of the grating), spatial frequency (the width of the grating), and phase (the position of the grating). In this dataset, 6 orientations (at 30° intervals), 5 spatial frequencies (0.02 — 0.32 cycles/°), and 4 phases are used resulting in a total of 120 stimulus conditions. Each grating is presented briefly (250 ms) before being replaced with a different orientation, spatial frequency and phase condition. Each condition is presented 50 times, in random order, with intermittent blank sweeps.
+							<br>
+							<br>
+							<div class="center-align">
+								<img src="{% static "brain_observatory_app/images/static_gratings/static_grating_stimuli.JPG" %}"/>
+							</div>
+							<br>
+							<br>
+							<h5 class="left-align">Evaluating cellular responses to the Static Gratings Visual Stimulus</h5>
+							Capturing the responses to all 120 static grating conditions has up to this point required several figures. Two-dimensional heatmaps can capture the orientation and spatial frequency tuning for each phase. Alternately, the spatial frequency tuning can be plotted at the preferred orientation for each phase, or reciprocally, the orientation tuning can be plotted at the preferred spatial frequency, also at each phase.
+							<br>
+							<br>
+							<div class="center-align">
+								<img src="{% static "brain_observatory_app/images/static_gratings/cell_responses.JPG" %}"/>
+								<img src="{% static "brain_observatory_app/images/static_gratings/phase.JPG" %}"/>
+							</div>
+							<br>
+							<br>
+							<h5 class="left-align">Visualization</h5>
+							To capture the cellular responses of all these conditions in a single figure, the cellular responses to each static grating are being represented using the "Fan" plot. Each arm represents the orientation of the grating, while each arc represents a spatial frequency with the lowest frequency near the center of the plot and higher frequencies radiating outward. At the intersections of these axes are four lobes, each corresponding to a different phase. Each dot represents the response to a single trial of that grating condition, the color and intensity corresponding to the strength of the response. In this way, the rank-ordered dots capture both the strength and the trial-to-trial variability of the cells response to each condition.
+							<br>
+							<br>
+							<div class="center-align">
+								<img src="{% static "brain_observatory_app/images/static_gratings/fan_plot.JPG" %}" />
+							</div>
+							<br>
+							<br>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s10 offset-s2">
+				<div class="container section">
+					<h3 class="center-align">Locally Sparse Noise</h3>
+					<div class="left-align flow-text">
+						<div class="section">
+							<h5 class="left-align">Importance</h5>
+							The cellular responses acquired during the presentation of the Locally Sparse Noise stimulus provide data to help characterize visual tuning properties of cells, such as definition of the spatial receptive field, including both On and Off subunits.
+							<br>
+							<br>
+							<div class="center-align">
+								<iframe width="420" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+							</div>
+							<br>
+							<h5 class="left-align">Visual of Stimulus</h5>
+							Conventionally, the spatial dimensions of the receptive field have been measured with a sparse noise stimulus, which consists of a mean luminance gray display with a single white or black spot presented briefly in different locations. This stimulus allows the visual field to be fully sampled with both light (On) and dark (Off) stimuli to map the extent of the cells' receptive fields. Complete sampling of all positions in the visual field can require hours of visual stimulus data collection.
+							<br>
+							<br>
+							<div class="center-align">
+								<img src="{% static "brain_observatory_app/images/locally_sparse_noise/sparse_noise_white_spot.JPG" %}" />
+								<img src="{% static "brain_observatory_app/images/locally_sparse_noise/sparse_noise_black_spot.JPG" %}" />
+							</div>
+							<br>
+							<br>
+							To examine the spatial extent of the receptive fields in an efficient manner, a "Locally Sparse Noise" stimulus was developed. In this display, multiple black and white spots are presented in each stimulus frame (250 ms each). Each spot is 4.65 on a side, and is surrounded by a spatial exclusion zone of 23 that is not occupied by any other spot. To better map receptive fields in higher visual areas, we also present a stimulus that has larger 9.3 spots, and a 46.5 degree exclusions zone, in experiments released in June 2017. Please note that the NWB files and Allen SDK refer to these two stimuli as Locally Sparse Noise 4 deg and Locally Sparse Noise 8 deg respectively.Locally sparse noise
+							<br>
+							<br>
+							<div class="center-align">
+								<img src="{% static "brain_observatory_app/images/locally_sparse_noise/locally_sparse_noise.JPG" %}" />
+							</div>
+							<br>
+							<br>
+							<h5 class="left-align">Evaluating cellular responses to the Locally Sparse Noise visual Stimulus</h5>
+							To map the receptive field structure, the cellular response is averaged over all trials (~115 trials) when a given location is occupied by a spot, (i.e., a white spot). While there were other spots present in the stimulus for this particular trial, the arrangement of these spots was always different, such that the effect of the other spots on a cell's response should average away. A heatmap of a cell's On responses is created by looking at these average responses for each location in the visual field. Similarly, a heatmap of the cell's Off responses can be created by looking at the responses for the black spots across all locations.
+							<br>
+							<br>
+							<div class="center-align">
+								<img src="{% static "brain_observatory_app/images/locally_sparse_noise/heatmap_on_and_off.JPG" %}" />
+							</div>		
+							<br>
+							<br>
+							<h5 class="left-align">Visualization</h5>
+							The spatial receptive field for each cell is represented by two plots, showing the locations where the cell responded to white pixels (On) and black pixels (Off). For both On and Off, the mask of responsive pixels, created using a p-value map with multiple comparison correction, is applied to the stimulus average of responsive trials. The result is that only responsive pixels are shown, the strength of their response being indicated by the darkness of the color (red for On, blue for Off). This visualization captures the structure of On and Off subunits in the cell's spatial receptive field.
+							<br>
+							<br>
+							<div class="center-align">
+								<img src="{% static "brain_observatory_app/images/locally_sparse_noise/receptive_field_on_off.JPG" %}" />
+							</div>
+							<br>
+							<br>
+							Consistent with the other visualizations in the Allen Brain Observatory, a figure highlighting the trial-to-trial variability of the responses to this stimulus, or the "Pincushion" plot, was created. For each location in visual space, all of the trials for an On stimulus are ranked and represented as dots, whose red hue corresponds to the strength of that trial. The same is done for the off stimulus in blue plots. This visualization not only shows the locations of strong responses to the On and Off stimuli (e.g. the On and Off subunits), but also reveals where the presence of the On or Off stimulus causes a suppression of activity, evidenced by a smaller number of red or blue dots than in surrounding areas.
+							<br>
+							<br>
+							<div class="center-align">
+								<img src="{% static "brain_observatory_app/images/locally_sparse_noise/pincushion_plot_on.JPG" %}" />
+								<img src="{% static "brain_observatory_app/images/locally_sparse_noise/pincushion_plot_off.JPG" %}" />
+							</div>
+							<br>
+							<br>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="row">
+			<div class="col s10 offset-s2 blue lighten-5">
+				<div class="container section">
+					<h3 class="center-align">Natural Scenes</h3>
+					<div class="left-align flow-text">
+						<div class="section">
+							<h5 class="left-align">Importance</h5>
+							The activated calcium responses that are quantitated during the presentation of natural scenes provide data to help characterize individual cellular and cell population responses to complex visual stimuli in the visual cortex.
+							<br>
+							<br>
+							<div class="center-align">
+								<iframe width="420" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+							</div>
+							<br>
+							<h5 class="left-align">Visual of Stimulus</h5>
+							To examine the cellular responses to natural stimuli, a library of 118 natural scenes was used, selected from three different databases (Berkeley Segmentation Dataset, van Hateren Natural Image Dataset and McGill Calibrated Colour Image Database). A scene image was presented briefly (250 ms) then replaced with the next scene image. Each image was presented 50 times, in a random order, with intermittent blank intervals
+							<div class="carousel">								
+								<img class="carousel-item" href="#six!" src="{% static "brain_observatory_app/images/natural_scenes/natural_scene_6.JPG" %}" />
+								<img class="carousel-item" href="#one!" src="{% static "brain_observatory_app/images/natural_scenes/natural_scene_1.JPG" %}" />
+								<img class="carousel-item" href="#two!" src="{% static "brain_observatory_app/images/natural_scenes/natural_scene_2.JPG" %}" />
+								<img class="carousel-item" href="#three!" src="{% static "brain_observatory_app/images/natural_scenes/natural_scene_3.JPG" %}" />
+								<img class="carousel-item" href="#four!" src="{% static "brain_observatory_app/images/natural_scenes/natural_scene_4.JPG" %}" />
+								<img class="carousel-item" href="#five!" src="{% static "brain_observatory_app/images/natural_scenes/natural_scene_5.JPG" %}" />
+								<img class="carousel-item" href="#seven!" src="{% static "brain_observatory_app/images/natural_scenes/natural_scene_7.JPG" %}" />
+								<img class="carousel-item" href="#eight!" src="{% static "brain_observatory_app/images/natural_scenes/natural_scene_8.JPG" %}" />
+								<img class="carousel-item" href="#nine!" src="{% static "brain_observatory_app/images/natural_scenes/natural_scene_9.JPG" %}" />
+								<img class="carousel-item" href="#ten!" src="{% static "brain_observatory_app/images/natural_scenes/natural_scene_10.JPG" %}" />
+							</div>
+							<h5 class="left-align">Data Visualization</h5>
+							Data gathered from each image are represented along a ray extending from the center circle in the "Corona" plot. The cellular response to each image presentation is represented by a single dot, where the color corresponds to the intensity of the response. Dots are arranged with the strongest response positioned at the core, with lower intensity responses radiating away from the center. This representation allows viewers to easily determine which images elicited the greatest cellular response, and reveals cells that have particularly selective responses in comparison to cells that respond broadly to the presentation of a variety of images.
+							<br>
+							<br>
+							<div class="center-align">
+								<img src="{% static "brain_observatory_app/images/natural_scenes/natural_scene_1.JPG" %}" />
+							</div>
+							<br>
+							<br>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+		<div class="row">
+			<div class="col s10 offset-s2">
+				<div class="container section">
+					<h3 class="center-align">Natural Movies</h3>
+					<div class="left-align flow-text">
+						<div class="section">
+							<h5 class="left-align">Importance</h5>
+							The activated calcium responses that are quantitated during the presentation of short movie clips provide data to help characterize individual cellular and cell population responses to complex visual stimuli in the visual cortex.
+							<br>
+							<br>
+							<div class="center-align">
+								<iframe width="420" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+							</div>
+							<br>
+							<h5 class="left-align">Visual of Stimulus</h5>
+							The use of short movie clips allows exploration of the cellular response to streaming visual stimuli. Two 30 second clips and one 120 second clip from the opening scene of Touch of Evil (Zugsmith & Welles, 1958) have been incorporated into a visual stimulus presentation series. Each movie clip is presented 10 times in a trial.
+							<br>
+							<br>
+							<div class="center-align">
+								<img src="{% static "brain_observatory_app/images/natural_movies/clip_1_30sec.JPG" %}" />
+								<img src="{% static "brain_observatory_app/images/natural_movies/clip_2_30sec.JPG" %}" />
+								<img src="{% static "brain_observatory_app/images/natural_movies/clip_3_120sec.JPG" %}" />
+							</div>
+							<br>
+							<br>
+							<h5 class="left-align">Data Visualization</h5>
+							The response to the natural movie stimulus is displayed in the "Track" plot. Each ring represents a single trial of the movie, starting at the top and proceeding clockwise around the circle. The intensity of cellular response is represented as a heatmap, sampled in one second intervals. The ten trials are surrounded by the mean response, showing the average response across all 10 trials, represented in in the outer-most blue ring.
+							<br>
+							<br>
+							<div class="center-align">
+								<img src="{% static "brain_observatory_app/images/natural_movies/track_plot.JPG" %}" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</body>
+</html>
+

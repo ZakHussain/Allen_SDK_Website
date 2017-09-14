@@ -30,4 +30,5 @@ $(document).ready(function(){
 		$('#overview').show();
 		$('#mouse-connectivity-overview').hide();
 	});
+
 });

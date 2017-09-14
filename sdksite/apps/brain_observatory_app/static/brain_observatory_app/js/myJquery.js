@@ -1,6 +1,7 @@
-$(document).ready(function(){
-	$('#experiment-container-lesson-selector').click(function(){
-		$('#experiment-container-lesson').removeClass('hidden');
-		$('#heading-title').addClass('hidden');
-	});
-});
+ $(document).ready(function(){
+      $('.carousel').carousel({
+            dist:0,
+            shift:0,
+            padding:20,
+      });
+    });
