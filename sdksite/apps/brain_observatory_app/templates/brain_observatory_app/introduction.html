@@ -37,7 +37,7 @@
 						  <a href="{% url 'brain_observatory_index' %}"><i class="material-icons tiny">arrow_back</i>Introduction</a>
 						</li> 
 						<li class="nav-item">About</li>
-						<li class="nav-item">The Experiment</li>
+						<li class="nav-item">Experiment Overview</li>
 						<li class="nav-item">Experiment Design</li>
 						<li class="nav-item">Analysis Basics</li>		
 					</ul>
@@ -51,7 +51,7 @@
 		<div class="row">
 			<div class="col s10 offset-s2">
 				<div class="container blue div-border">
-					<h1 class="white-text center-align">Welcome to the Brain Observatory SDK</h1>
+					<h1 class="white-text center-align">Introduction</h1>
 				</div>
 			</div>
 		</div>
@@ -62,18 +62,17 @@
 					<h3 class="center-align">About the Brain Observatory Data</h3>
 					<div class="left-align flow-text">
 						The Brain Observatory is home to data that comes from visual regions of mouse cortex.
-						There are two way of accessing the data. You can either search by <i>Experiment</i> or by <i>Cell</i>.
+						There are two way of accessing the data. You can either search by Experiment or by Cell.
 						So how do you decide which method of search to use?
 						<br>
 						<br>
-						Use the <i>Experiment</i> search if you would like to find neuronal-population responses to stimuli.
+						Use the Experiment search if you would like to find neuronal-population responses to stimuli.
+						or if you would like to find single-neuron responses to stimuli, use cell search.
 						<br>
 						<br>
-						Use the <i>Cell</i> search if you would like to find single-neuron responses to stimuli.
-						<br>
-						<br>
-						An in depth explanation of how to do each of these searches is found under the <i>Tutorials</i> section. For
-						now, let's get you oriented with our experimentation techniques so you understand what our data means
+						You will learn how to use these searches through the Introduction to Experiment Containers
+						and the Introduction to Ophys Experiments tutorials. For now, let's get you oriented with our 
+						experimentation techniques so you understand what our data means.
 					</div>
 				</div>
 			</div>
@@ -81,28 +80,23 @@
 		<div class="row">
 			<div class="col s10 offset-s2 red lighten-5">
 				<div class="container section">
-					<h3 class="center-align">Overview of the Experiments</h3>
+					<h3 class="center-align">Experiment Overview</h3>
 					<div class="left-align flow-text">
 						The data we gathered comes from a collection of experiments. Each experiment follows the same experimental 
 						design&mdash;a transgenic mouse is stimulated with three synthetic stimuli and two natural stimuli. The 
-						key difference between experiments is that the following variables differ:
-						<ul>
-							<li>the transgenic mouse line</li>
-							<li>the area of the visual cortex</li>
-							<li>depth at which the cells are imaged in the mouse visual cortex</li>
-						</ul> 
+						key difference between experiments is that the transgenic mouse line, area of the visual cortex, and 
+						depth at which the cells are imaged in the mouse visual cortex differ.
 						<br>
 						<br>
-						<ul>
-							<li>Having transgenic mice allow us to observe fluorescence in cells of different cortical layers.</li>
-							<li>There are six areas of the visual cortex, so we want to see the unique response of neurons in each region</li>
-							<li>observing the activtiy of cells at different depths creates a more distinct picture of how visual info is processed</li>
+						So why are these variable manipulated throughout experiments? Having different transgenic mice allow us 
+						to observe fluorescence in cells of different cortical layers. Also, since There are six areas of the 
+						visual cortex, each experiment looked at the unique response of neurons in a single region. With such a 
+						large collection of recordings from each section of the visual cortex, we can get a more transparent picture
+						of neurophysiological characterstics throughout the mouse visual cortex. Finally, observing the activity of 
+						cells at different depths creates a more distinct picture of how visual info is processed.
 						</ul>
 						<br>
 						<br>
-						These differences allow us to paint a larger picture for how neuronal physiology under different circumstances. 
-						Here is a rundown of the experimental procedure (look at white papers).
-						<p>pretty pictures go here</p>
 					</div>
 				</div>
 			</div>
@@ -141,10 +135,20 @@
 						<br>
 						<br>
 						<strong>Transgenic Lines</strong>
-					</div>
-					<!-- this code is for adding videos -->
-					<div>
-						<iframe width="420" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+						<br>
+						Two-photon calcium imaging was recorded in neurons expressing a calcium-sensitive fluorescent molecule. This is made possible by the use of animals harboring a genetically encoded calcium sensor, GCaMP6, which is imparted by use of the Ai93 line and expressed in subsets of cell populations due to a combinatorial transgenic line breeding strategy. The transgenic lines are a cross of CaMK2a-tTA - a transgene directing tetracycline-controlled transactivator protein (tTA) expression in forebrain excitatory neurons - and one of the following:
+						<br>
+						<br>
+						<ul class="center-align">
+							<li>Cux2-CreERT2</li>	
+							<li>Rorb-IRES2-Cre</li>	
+							<li>Rbp4-Cre_KL100</li>	
+							<li>Nr5a1-Cre</li>	
+							<li>Scnn1a-Tg3-Cre</li>	
+							<li>Emx1-IRES-Cre</li>	
+						</ul>
+						<br>
+						Histological characterization for each of these triple transgenic mouse lines is available by clicking on the Transgenic Characterization tab in the menu banner. Further characterization of each of these transgenic lines can be found in the <a href="http://help.brain-map.org/display/observatory/Documentation">Transgenic Mouse Catalog Document</a>.
 					</div>
 				</div>
 			</div>
@@ -160,7 +164,7 @@
 						But what can we do with this data? We can explore functional properties of neurons in the brain area by looking at spatial and temporal response characteristics of visual neurons. With this, we can then come one step closer to answering how neurons encode visual information.
 						<br>
 						<br>
-						The data you retrieve from the Brain Observatory will allow you to plot fluorsescence traces, retrieve images containing cells the were stimulated, run eye-tracking analysis, and mcuh more! So get to it, and have fun!
+						The data you retrieve from the Brain Observatory will allow you to plot fluorsescence traces, retrieve images containing cells that were stimulated, run eye-tracking analysis, and much more! So get to it, and have fun!
 					</div>
 				</div>
 			</div>
