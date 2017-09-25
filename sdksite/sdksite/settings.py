@@ -34,7 +34,6 @@ INSTALLED_APPS = [
     'apps.allen_sdk_app',
     'apps.beginners_app',
     'apps.brain_observatory_app',
-    'apps.coding_gurus_app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

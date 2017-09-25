@@ -20,7 +20,6 @@ urlpatterns = [
 	url(r'^', include('apps.allen_sdk_app.urls')),
 	url(r'^beginners/', include('apps.beginners_app.urls')),
     url(r'^brain_observatory_sdk/', include('apps.brain_observatory_app.urls')),
-    url(r'^coding_gurus/', include('apps.coding_gurus_app.urls')),
     url(r'^admin/', admin.site.urls),
 ]
     # url(r'^brain_observatory_sdk/', include('apps.brain_observatory_app.urls')),
