@@ -32,86 +32,17 @@
 					<h2 class="app-title flow-text">Brain Observatory</h2>
 				</div>
 				<div>
-					<!-- sidenac tabs as collapsables-->
-					<ul class="collapsible" data-collapsible="accordion">
-						<li class="section nav-item">
-							<div class="section collapsible-header">
-								<a href="{% url 'brain_observatory_index' %}">Welcome</a>
-								<i class="material-icons"></i>
-							</div>
-							<ul class="collapsible-body">
-								<li class="section nav-item">Basic Workflow</li>
-								<li class="section nav-item">About the Brain Observatory</li>
-								<li class="section nav-item">Overview of Experiment</li>
-								<li class="section nav-item">Overview of Visual Stimuli</li>
-								<li class="section nav-item">Overview of the Data</li>
-							</ul>
-						</li>
-						<!-- the goal of the Analysis section is to show the user basics of what they can create with the data -->
-						<li class="section nav-item">
-							<div class="section collapsible-header">
-								<a href="{% url 'analysis' %}">Analysis</a>
-								<i class="material-icons"></i>
-							</div>
-							<ul class="collapsible-body">
-								<li class="section nav-item">Analysis Overview</li>
-								<li class="section nav-item">Fluorescence Traces</li>
-								<li class="section nav-item">ROI Masks</li>
-								<li class="section nav-item">Neuropil Correction</li>
-								<li class="section nav-item">Mouse Movement Analysis</li>
-								<li class="section nav-item">Motion Correction</li>
-								<li class="section nav-item">Eye Tracking</li>
-							</ul>
-						</li>
-						<li class="section nav-item">
-							<div class="section collapsible-header">
-								<a href="{% url 'walkthroughs' %}">Walkthroughs</a>
-								<i class="material-icons"></i>
-							</div>
-							<ul class="collapsible-body">
-								<li class="section nav-item">Walkthrough Overview</li>
-								<li class="section nav-item">Run Cluster Analysis Based on Cell Responses</li>
-							</ul>
-						</li>
-						<li class="section nav-item">
-							<div class="section collapsible-header">
-								<a href="{% url 'tutorials' %}">Tutorials</a>
-								<i class="material-icons"></i>
-							</div>
-							<ul class="collapsible-body">
-								<li class="section nav-item">Tutorials Overview</li>
-								<li class="section nav-item">Intro to Experiment Containers</li>
-								<li class="section nav-item">Finding Cells of Interest</li>
-								<li class="section nav-item">Get Data for Fluorescence Traces</li>
-								<li class="section nav-item">Get Data for ROI Masks</li>
-								<li class="section nav-item">Get Data for Neuropil Correction</li>
-								<li class="section nav-item">Get Data for Running Analysis</li>
-								<li class="section nav-item">Get Data for Motion Correction</li>
-								<li class="section nav-item">Get Data for Eye Tracking</li>
-							</ul>
-						</li>
-						<li class="section nav-item">
-							<div class="section collapsible-header">
-								<a href="{% url 'documentation' %}">Documentation</a>
-								<i class="material-icons"></i>
-							</div>
-							<ul class="collapsible-body">	
-								<li class="section nav-item">Documentation Overview</li>	
-								<li class="section nav-item">Access Documentation</li>
-							</ul>
-						</li>
-						<li class="section nav-item">
-							<div class="section collapsible-header">
-								<a href="{% url 'release_notes' %}">Release Notes</a>
-								<i class="material-icons"></i>
-							</div>
-							<ul class="collapsible-body">
-								<li class="section nav-item">Revision 0.13.2</li>
-								<li class="section nav-item">This is second section.</li>
-							</ul>
-						</li>		
+					<ul>
+						<li class="section app-title flow-text">
+						  <a href="{% url 'brain_observatory_index' %}"><i class="material-icons tiny">arrow_back</i>Release Notes</a>
+						</li> 
+						<li class="nav-item">Revision 0.13.2</li>
+						<li class="nav-item">Revision X.X.X</li>
 					</ul>
-				</div>
+		        </div>
+		        <div class="center">
+		         	<a href="#"><h2 class="boxed-item box-highlight flow-text">Need Help?</h2></a>
+		        </div>
 			</div>
 		<!-- this will contain the main content -->
 		<div class="row">

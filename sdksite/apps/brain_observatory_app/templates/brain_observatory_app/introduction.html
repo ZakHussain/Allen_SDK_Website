@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Introduction | Brain Observatory </title>
+		<!--Import Google Icon Font-->
+      	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		{% load staticfiles %}
+		<!--Import css files-->
+		<link rel="stylesheet" type="text/css" href="{% static 'brain_observatory_app/css/myStyles.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'brain_observatory_app/css/materialize.css' %}">
+		<!--Import jQuery before materialize.js and myJquery.js-->	
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="{% static 'brain_observatory_app/js/myJquery.js' %}"></script>
+		<script type="text/javascript" src="{% static 'brain_observatory_app/js/materialize.js' %}"></script>
+	</head>
+	<body>
+		<!-- fixed nav bar at the top -->
+		<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper light-blue darken-4">
+					<a href="{% url 'index' %}" class="brand-logo flow-text minimum-width">ALLEN BRAIN ATLAS</a>
+				</div>
+			</nav>	
+		</div>
+		<!-- Sidebar Navigator-->
+		<div class="row" >
+			<div class="sidebar-menu col s2">
+				<!-- Title showing the name of the current app the use is on -->
+				<div class="center">
+					<a href="#"><h1 class="boxed-item flow-text">ALLEN <span class="logo-bold">SDK</span></h1></a>
+					<h2 class="app-title flow-text">Brain Observatory</h2>
+				</div>
+				<div>
+					<!-- sidenac tabs as collapsables-->
+					<ul>
+						<li class="section app-title flow-text">
+						  <a href="{% url 'brain_observatory_index' %}"><i class="material-icons tiny">arrow_back</i>Introduction</a>
+						</li> 
+						<li class="nav-item">About</li>
+						<li class="nav-item">The Experiment</li>
+						<li class="nav-item">Experiment Design</li>
+						<li class="nav-item">Analysis Basics</li>		
+					</ul>
+				</div>
+				<div class="center">
+					<a href="#"><h2 class="boxed-item box-highlight flow-text">Need Help?</h2></a>
+				</div>
+			</div>			
+		</div>
+		<!-- this will contain the main content -->
+		<div class="row">
+			<div class="col s10 offset-s2">
+				<div class="container blue div-border">
+					<h1 class="white-text center-align">Welcome to the Brain Observatory SDK</h1>
+				</div>
+			</div>
+		</div>
+		<!-- CONTENT -->
+		<div class="row">
+			<div class="col s10 offset-s2">
+				<div class="container section">
+					<h3 class="center-align">About the Brain Observatory Data</h3>
+					<div class="left-align flow-text">
+						The Brain Observatory is home to data that comes from visual regions of mouse cortex.
+						There are two way of accessing the data. You can either search by <i>Experiment</i> or by <i>Cell</i>.
+						So how do you decide which method of search to use?
+						<br>
+						<br>
+						Use the <i>Experiment</i> search if you would like to find neuronal-population responses to stimuli.
+						<br>
+						<br>
+						Use the <i>Cell</i> search if you would like to find single-neuron responses to stimuli.
+						<br>
+						<br>
+						An in depth explanation of how to do each of these searches is found under the <i>Tutorials</i> section. For
+						now, let's get you oriented with our experimentation techniques so you understand what our data means
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s10 offset-s2 red lighten-5">
+				<div class="container section">
+					<h3 class="center-align">Overview of the Experiments</h3>
+					<div class="left-align flow-text">
+						The data we gathered comes from a collection of experiments. Each experiment follows the same experimental 
+						design&mdash;a transgenic mouse is stimulated with three synthetic stimuli and two natural stimuli. The 
+						key difference between experiments is that the following variables differ:
+						<ul>
+							<li>the transgenic mouse line</li>
+							<li>the area of the visual cortex</li>
+							<li>depth at which the cells are imaged in the mouse visual cortex</li>
+						</ul> 
+						<br>
+						<br>
+						<ul>
+							<li>Having transgenic mice allow us to observe fluorescence in cells of different cortical layers.</li>
+							<li>There are six areas of the visual cortex, so we want to see the unique response of neurons in each region</li>
+							<li>observing the activtiy of cells at different depths creates a more distinct picture of how visual info is processed</li>
+						</ul>
+						<br>
+						<br>
+						These differences allow us to paint a larger picture for how neuronal physiology under different circumstances. 
+						Here is a rundown of the experimental procedure (look at white papers).
+						<p>pretty pictures go here</p>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="row">
+			<div class="col s10 offset-s2">
+				<div class="container section">
+					<h3 class="center-align">Experiment Design</h3>
+					<div class="left-align flow-text">
+						An experiment is composed of three, one-hour long two-photon imaging calcium sessions on an awake mouse 
+						presented with a series of visual stimuli. An Experiment is the unique combination of one mouse, one imaging
+						depth (e.g. 175 um from surface of cortex), and one visual area. Each experiment includes three imaging 
+						sessions as illustrated below. 
+					</div>
+					<br>
+					<div>
+						*note*: Data released in the June 2016 and Oct. 2016 releases were collected using sessions A, B, and C. Data
+						released in June 2017 were collected using session A, B, and C2.	
+					</div>
+					<br>
+					<br>
+					<!-- this the experiment design image -->
+					<div>
+						<img src="{% static "brain_observatory_app/images/Experimental_Design/StimulusDesign.png" %}"/>
+					</div>
+					<br>
+					<br>
+					<div class="left-align flow-text">
+						<strong>Targeted Function Visual Areas</strong>
+							<div>
+								<!-- this the visual areas chart image -->
+								<img src="{% static "brain_observatory_app/images/Experimental_Design/VisualAreasChart.png" %}"/>
+								<!-- this the visual areas on the mouse cortex image -->
+								<img src="{% static "brain_observatory_app/images/Experimental_Design/VisualAreas.PNG" %}"/>
+							</div>
+						<br>
+						<br>
+						<strong>Transgenic Lines</strong>
+					</div>
+					<!-- this code is for adding videos -->
+					<div>
+						<iframe width="420" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s10 offset-s2 purple lighten-5">
+				<div class="container section">
+					<h3 class="center-align">Analysis Basics</h3>
+					<div class="left-align flow-text">
+						Our Brain Observatory project reveals how neurons encode different visual stimuli in both single cells and populations of cells found within mouse visual cortex.
+						<br>
+						<br>
+						But what can we do with this data? We can explore functional properties of neurons in the brain area by looking at spatial and temporal response characteristics of visual neurons. With this, we can then come one step closer to answering how neurons encode visual information.
+						<br>
+						<br>
+						The data you retrieve from the Brain Observatory will allow you to plot fluorsescence traces, retrieve images containing cells the were stimulated, run eye-tracking analysis, and mcuh more! So get to it, and have fun!
+					</div>
+				</div>
+			</div>
+		</div>	
+	</body>
+</html>
+

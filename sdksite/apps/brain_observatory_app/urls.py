@@ -3,6 +3,7 @@ from . import views
 
 urlpatterns = [
 	url(r'^$', views.index, name='brain_observatory_index'),
+	url(r'^introduction/$', views.introduction, name='introduction'),
 	url(r'^visual_coding/$', views.visual_coding, name='visual_coding'),
 	url(r'^tutorials/$', views.tutorials, name='tutorials'),
 	url(r'^documentation/$', views.documentation, name='documentation'),

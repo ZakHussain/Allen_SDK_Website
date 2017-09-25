@@ -17,7 +17,7 @@
 		<!-- fixed nav bar at the top -->
 		<div class="navbar-fixed">
 			<nav>
-				<div class="nav-wrapper  light-blue darken-4">
+				<div class="nav-wrapper light-blue darken-4">
 					<a href="{% url 'index' %}" class="brand-logo flow-text minimum-width">ALLEN BRAIN ATLAS</a>
 				</div>
 			</nav>	
@@ -32,84 +32,16 @@
 				</div>
 				<div>
 					<!-- sidenac tabs as collapsables-->
-					<ul class="collapsible" data-collapsible="accordion">
-						<li class="section nav-item">
-							<div class="section collapsible-header">
-								<a href="{% url 'brain_observatory_index' %}">Welcome</a>
-								<i class="material-icons"></i>
-							</div>
-							<ul class="collapsible-body">
-								<li class="section nav-item">Basic Workflow</li>
-								<li class="section nav-item">About the Brain Observatory</li>
-								<li class="section nav-item">Overview of Experiment</li>
-								<li class="section nav-item">Overview of Visual Stimuli</li>
-								<li class="section nav-item">Overview of the Data</li>
-							</ul>
+					<ul>
+						<li class="section app-title flow-text">
+							<a href="{% url 'brain_observatory_index' %}">Welcome</a>
 						</li>
-						<!-- the goal of the Visual Coding section show the use how we used different stimuli to look at visual coding in the brain -->
-						<li class="section nav-item">
-							<div class="section collapsible-header">
-								<a href="{% url 'visual_coding' %}">Visual Coding</a>
-								<i class="material-icons"></i>
-							</div>
-							<ul class="collapsible-body">
-								<li class="section nav-item">Overview</li>
-								<li class="section nav-item">Understanding the Stimuli</li>
-								<li class="section nav-item">Drifting Gratings</li>
-								<li class="section nav-item">Static Gratings</li>
-								<li class="section nav-item">Natural Scenes</li>
-								<li class="section nav-item">Locally Sparse Noise</li>
-								<li class="section nav-item">Eye Tracking</li>
-							</ul>
-						</li>
-						<!-- the goal of the Analysis section is to show the user basics of what they can create with the data -->
-						<li class="section nav-item">
-							<div class="section collapsible-header">
-								<a href="{% url 'walkthroughs' %}">Walkthroughs</a>
-								<i class="material-icons"></i>
-							</div>
-							<ul class="collapsible-body">
-								<li class="section nav-item">Walkthrough Overview</li>
-								<li class="section nav-item">Run Cluster Analysis Based on Cell Responses</li>
-							</ul>
-						</li>
-						<li class="section nav-item">
-							<div class="section collapsible-header">
-								<a href="{% url 'tutorials' %}">Tutorials</a>
-								<i class="material-icons"></i>
-							</div>
-							<ul class="collapsible-body">
-								<li class="section nav-item">Tutorials Overview</li>
-								<li class="section nav-item">Intro to Experiment Containers</li>
-								<li class="section nav-item">Finding Cells of Interest</li>
-								<li class="section nav-item">Get Data for Fluorescence Traces</li>
-								<li class="section nav-item">Get Data for ROI Masks</li>
-								<li class="section nav-item">Get Data for Neuropil Correction</li>
-								<li class="section nav-item">Get Data for Running Analysis</li>
-								<li class="section nav-item">Get Data for Motion Correction</li>
-								<li class="section nav-item">Get Data for Eye Tracking</li>
-							</ul>
-						</li>
-						<li class="section nav-item">
-							<div class="section collapsible-header">
-								<a href="{% url 'documentation' %}">Documentation</a>
-								<i class="material-icons"></i>
-							</div>
-							<ul class="collapsible-body">	
-								<li class="section nav-item">Documentation Overview</li>	
-								<li class="section nav-item">Access Documentation</li>
-							</ul>
-						</li>
-						<li class="section nav-item">
-							<div class="section collapsible-header">
-								<a href="{% url 'release_notes' %}">Release Notes</a>
-								<i class="material-icons"></i>
-							</div>
-							<ul class="collapsible-body">
-								<li class="section nav-item">Revision 0.13.2</li>
-								<li class="section nav-item">This is second section.</li>
-							</ul>
-						</li>		
+						<li class="nav-item"><a href="{% url 'introduction' %}">Introduction</a></li>
+						<li class="nav-item"><a href="{% url 'visual_coding' %}">Visual Coding</a></li>
+						<li class="nav-item"><a href="{% url 'tutorials' %}">Tutorials</a></li>
+						<li class="nav-item"><a href="{% url 'documentation' %}">Documentation</a></li>
+						<li class="nav-item"><a href="{% url 'release_notes' %}">Release Notes</a></li>
+		
 					</ul>
 				</div>
 				<div class="center">
@@ -121,7 +53,7 @@
 		<div class="row">
 			<div class="col s10 offset-s2">
 				<div class="container blue div-border">
-					<h1 class="white-text center-align">Welcome to the Brain Observatory SDK</h1>
+					<h1 class="white-text center-align">Welcome to the Brain Observatory</h1>
 				</div>
 			</div>
 		</div>
@@ -130,112 +62,16 @@
 			<div class="col s10 offset-s2">
 				<div class="container section">
 					<h3 class="center-align">Basic Workflow</h3>
-					<div class="left-align flow-text">
-					<div class="center-align">
-						<iframe width="420" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0" allowfullscreen></iframe>
-					</div>						
+					<div class="left-align flow-text">					
 						Being able to help you utilize our data to fuel scientific growth is a key Institute goal. 
 					   	It is important to us to help you effectively and efficiently access our data. 
-					   	That gives you time to focus on what is truly important&mdash;<i>GENERATING MEANINGFUL ANALYSIS!</i> 
+					   	That gives you time to focus on what is truly important&mdash;generating meaningful analysis!
 					    <br>
 					    <br>
 					    To get you started with the brain observatory, here is an idea of what your basic workflow 
 						should look.
 						<br>
 						insert diagram here					
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col s10 offset-s2  red lighten-5">
-				<div class="container section">
-					<h3 class="center-align">About the Brain Observatory Data</h3>
-					<div class="left-align flow-text">
-						The Brain Observatory is home to data that comes from visual regions of mouse cortex.
-						There are two way of accessing the data. You can either search by <i>Experiment</i> or by <i>Cell</i>.
-						So how do you decide which method of search to use?
-						<br>
-						<br>
-						Use the <i>Experiment</i> search if you would like to find neuronal-population responses to stimuli.
-						<br>
-						<br>
-						Use the <i>Cell</i> search if you would like to find single-neuron responses to stimuli.
-						<br>
-						<br>
-						An in depth explanation of how to do each of these searches is found under the <i>Tutorials</i> section. For
-						now, let's get you oriented with our experimentation techniques so you understand what our data means
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col s10 offset-s2">
-				<div class="container section">
-					<h3 class="center-align">Overview of the Experiments</h3>
-					<div class="left-align flow-text">
-						The data we gathered comes from a collection of experiments. Each experiment follows the same experimental 
-						design&mdash;a transgenic mouse is stimulated with three synthetic stimuli and two natural stimuli. The 
-						key difference between experiments is that the following variables differ:
-						<ul>
-							<li>the transgenic mouse line</li>
-							<li>the area of the visual cortex</li>
-							<li>depth at which the cells are imaged in the mouse visual cortex</li>
-						</ul> 
-						<br>
-						<br>
-						<ul>
-							<li>Having transgenic mice allow us to observe fluorescence in cells of different cortical layers.</li>
-							<li>There are six areas of the visual cortex, so we want to see the unique response of neurons in each region</li>
-							<li>observing the activtiy of cells at different depths creates a more distinct picture of how visual info is processed</li>
-						</ul>
-						<br>
-						<br>
-						These differences allow us to paint a larger picture for how neuronal physiology under different circumstances. 
-						Here is a rundown of the experimental procedure (look at white papers).
-						<p>pretty pictures go here</p>
-					</div>
-				</div>
-			</div>
-		</div>	
-		<div class="row">
-			<div class="col s10 offset-s2 purple lighten-5">
-				<div class="container section">
-					<h3 class="center-align">Experiment Design</h3>
-					<div class="left-align flow-text">
-						An experiment is composed of three, one-hour long two-photon imaging calcium sessions on an awake mouse 
-						presented with a series of visual stimuli. An Experiment is the unique combination of one mouse, one imaging
-						depth (e.g. 175 um from surface of cortex), and one visual area. Each experiment includes three imaging 
-						sessions as illustrated below. 
-					</div>
-					<br>
-					<div>
-						*note*: Data released in the June 2016 and Oct. 2016 releases were collected using sessions A, B, and C. Data
-						released in June 2017 were collected using session A, B, and C2.	
-					</div>
-					<br>
-					<br>
-					<!-- this the experiment design image -->
-					<div>
-						<img src="{% static "brain_observatory_app/images/Experimental_Design/StimulusDesign.png" %}"/>
-					</div>
-					<br>
-					<br>
-					<div class="left-align flow-text">
-						<strong>Targeted Function Visual Areas</strong>
-							<div>
-								<!-- this the visual areas chart image -->
-								<img src="{% static "brain_observatory_app/images/Experimental_Design/VisualAreasChart.png" %}"/>
-								<!-- this the visual areas on the mouse cortex image -->
-								<img src="{% static "brain_observatory_app/images/Experimental_Design/VisualAreas.PNG" %}"/>
-							</div>
-						<br>
-						<br>
-						<strong>Transgenic Lines</strong>
-					</div>
-					<!-- this code is for adding videos -->
-					<div>
-						<iframe width="420" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
 			</div>

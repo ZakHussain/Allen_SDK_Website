@@ -8,6 +8,9 @@ from django.http import HttpResponse
 def index(request):
 	return render(request, 'brain_observatory_app/index.html')
 
+def introduction(request):
+	return render(request, 'brain_observatory_app/introduction.html')
+
 def visual_coding(request):
 	return render(request, 'brain_observatory_app/visual_coding.html')
 
