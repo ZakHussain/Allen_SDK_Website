@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Allen SDK 2.0</title>
+		<title>Allen SDK</title>
 		{% load staticfiles %}
 		<link rel="stylesheet" type="text/css" href="{% static 'allen_sdk_app/css/materialize.css' %}">
 		<link rel="stylesheet" type="text/css" href="{% static 'allen_sdk_app/css/myStyles.css' %}">
@@ -26,46 +26,58 @@
 				<h1>Explore the Data Resources</h1>
 			</div>
 			<div class="section">
-<!-- #################################### -->
-
 				<div id="brain-observatory-card" class="col s4 hoverable center-align">
 					<div class="card-image">
-						<a href="{% url 'brain_observatory_index' %}"><span class="flow-text">Brain Observatory</span></a>
+						<a href="{% url 'brain_observatory_index' %}">
+							<span class="flow-text">Brain Observatory</span>
+						</a>
 					</div>
 				</div>
-
-<!-- #################################### -->
 				<div id="cell-types-card" class="col s4 hoverable center-align">
-					<a href="#"><span class="flow-text">Cell Types Database</span></a>
+					<a href="#">
+						<span class="flow-text">Cell Types Database</span>
+					</a>
 				</div>
 				<div id="mouse-connectivity-card" class="col s4 hoverable center-align">
-					<a href="#"><span class="flow-text">Mouse Connectivity Atlas</span></a>
+					<a href="#">
+						<span class="flow-text">Mouse Connectivity Atlas</span>
+					</a>
 				</div>
 			</div>
 		</div>
 
 		<div class="row container">
 			<div class="section">
-				<div class="col s6 offset-s3 center-align card">
-					
-					<p id="brain-observatory-overview" class="flow-text hidden">
+				<div class="col s6 offset-s3 left-align">
+					<div id="brain-observatory-overview" class="flow-text hidden white-text">
 						The Brain Observatory SDK contains data collected from mouse visual cortex. 
 						This data features visually evoked neuronal activity from:
-						fluorescing neurons in selected cortical layers	
-						neurons in different visual areas
-						neurons in different mouse Cre lines
-						The data will allow you to observe the dynamic behavior of neurons 
-					</p>
-					<p id="cell-types-overview" class="flow-text hidden">
-						The Cell Types SDK database contains data from comprehensive study on individual neurons in mouse primary visual cortex. 
-						This data features the following neuronal characteristics:
-						electrophiological properties
-						Morphological attributes
-						The data will allow you to discover the characteristic differences between types of neurons 						
-					</p>
-					<p id="mouse-connectivity-overview" class="flow-text hidden">
-						The Mouse connectivity database contains a large assortment of experimental data collected in order to better understand how specific regions in the mouse brain are connected. The data consists of a collection of high resolution images, each of which targets a specific area of the mouse brain and follows the pathways the respective region projects onto.
-					</p>
+						<br>
+						<ul class="left-align">
+							<li>Fluorescent neurons in selected cortical layers.</li>
+							<li>Neurons in different visual areas.</li>
+							<li>Neurons in different mouse Cre lines.</li>
+						</ul>
+						Here, you can observe the dynamic behavior of neurons!		 
+					</div>
+					<div id="cell-types-overview" class="flow-text hidden white-text">
+						The Cell Types SDK database contains data from comprehensive study on individual neurons in mouse primary visual cortex. This data features the following neuronal characteristics:
+						<ul class="left-align">
+							<li>Electrophysiological properties.</li>
+							<li>Morphological attributes.</li>
+						</ul>
+						Here, you will discover the characteristic differences between types of neurons! 						
+					</div>
+					<div id="mouse-connectivity-overview" class="flow-text hidden white-text">
+						The Mouse connectivity Atlas contains experimental data to better understand how connections in the mouse brain.
+						The data consists of the following:
+						<ul>
+						 	<li>a collection of high resolution images.</li> 
+						 	<li>images targeting specific area mouse cortex.</li> 
+						 	<li>images following the neuoronal pathways and projections.</li>
+						 </ul>
+						Here, you can explore the pathways through which neurons connect!
+					</div>
 				</div>
 			</div>
 		</div>
